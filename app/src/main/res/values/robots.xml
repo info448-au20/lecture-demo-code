@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="robot_array">
+        <item>R2-D2</item>
+        <item>BB-8</item>
+        <item>C-3PO</item>
+        <item>Dalek</item>
+        <item>Robbie</item>
+        <item>Gort</item>
+        <item>Optimus Prime</item>
+    </string-array>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/RobotListFragment"
+    >
+
+    <fragment
+        android:id="@+id/RobotListFragment"
+        android:name="edu.uw.info448.demo.RobotListFragment"
+        android:label="Robot List"
+        tools:layout="@layout/fragment_list"
+        >
+        <action
+            android:id="@+id/action_to_SecondFragment"
+            app:destination="@id/SecondFragment"
+            />
+        <action
+            android:id="@+id/action_to_RobotDetailFragment"
+            app:destination="@id/RobotDetailFragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RobotDetailFragment"
+        android:name="edu.uw.info448.demo.RobotDetailFragment"
+        android:label="Robot Detail"
+        tools:layout="@layout/fragment_robot_detail"
+        >
+        <argument
+            android:name="robotName"
+            app:argType="string"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="edu.uw.info448.demo.SecondFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second"
+        />
+
+    <action
+        android:id="@+id/action_global_to_RobotListFragment"
+        app:destination="@id/RobotListFragment"
+        />
+
+</navigation>
