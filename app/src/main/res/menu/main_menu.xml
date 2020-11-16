@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_item_hello"
+        android:title="Say hello!"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_item_share"
+        android:title="Share"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"
+        />
+
+    <item
+        android:id="@+id/menu_item_call"
+        android:title="Call"
+        app:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_call"
+        />
+
+</menu>
