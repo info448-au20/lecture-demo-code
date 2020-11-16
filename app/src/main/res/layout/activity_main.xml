@@ -8,31 +8,52 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/frag_container"
+    <EditText
+        android:id="@+id/edit_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+
+        <Button
+            android:id="@+id/btn_repos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Repos for..."
+            android:onClick="getRepos"
+            />
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Search for..."
+            android:onClick="searchRepos"
+            />
+        <Button
+            android:id="@+id/btn_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Emoji"
+            android:onClick="getEmoji"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        >
-
-        <fragment
-            android:id="@+id/nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_graph"
-            />
-
-    </FrameLayout>
-
-    <Button
-        android:id="@+id/btn_more"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="More details"
-        android:layout_gravity="end"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
 
 </LinearLayout>
